@@ -57,7 +57,7 @@ config:
         Host            mhc-logging-master
         Port            9200
         HTTP_User       elastic
-        HTTP_Passwd     y42z3fhQ8nkuUaYX
+        HTTP_Passwd     Elastic@123
         tls             On
         tls.verify      Off
         Logstash_Format On
@@ -70,6 +70,9 @@ config:
         Log_Level     info
         Daemon        Off
         Parsers_File  parsers.conf
+        HTTP_Server   On
+        HTTP_Listen   0.0.0.0
+        HTTP_Port     2020
   upstream: {}
 daemonSetVolumeMounts:
 - mountPath: /var/log
