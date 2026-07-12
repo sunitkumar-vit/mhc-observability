@@ -61,6 +61,8 @@ config:
         tls             On
         tls.verify      Off
         Logstash_Format On
+        Logstash_Prefix mhc-dev
+        Suppress_Type_Name  On
         Retry_Limit     False
   service: |
     [SERVICE]
