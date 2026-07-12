@@ -1,0 +1,51 @@
+{
+  "index_patterns": [
+    "mhc-dev-*"
+  ],
+  "priority": 500,
+  "template": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 0
+    },
+    "mappings": {
+      "dynamic": true,
+      "properties": {
+        "@timestamp": {
+          "type": "date"
+        },
+        "message": {
+          "type": "text"
+        },
+        "stream": {
+          "type": "keyword"
+        },
+        "logtag": {
+          "type": "keyword"
+        },
+        "time": {
+          "type": "date"
+        },
+        "kubernetes": {
+          "properties": {
+            "namespace_name": {
+              "type": "keyword"
+            },
+            "pod_name": {
+              "type": "keyword"
+            },
+            "container_name": {
+              "type": "keyword"
+            },
+            "host": {
+              "type": "keyword"
+            },
+            "labels": {
+              "type": "flattened"
+            }
+          }
+        }
+      }
+    }
+  }
+}
