@@ -52,7 +52,6 @@ data:
         @INCLUDE output-preprod.conf
         @INCLUDE output-prod.conf
         @INCLUDE output-system.conf
-        @INCLUDE output-node.conf
     
     
     
@@ -79,11 +78,6 @@ data:
         Refresh_Interval  5
         Mem_Buf_Limit     50MB
         Skip_Long_Lines   On
-    [INPUT]
-        Name              systemd
-        Tag               host.*
-        Systemd_Filter    _SYSTEMD_UNIT=kubelet.service
-        Read_From_Tail    On
     
   output-dev.conf: |
     [OUTPUT]
@@ -97,22 +91,6 @@ data:
         tls.verify          Off
         Logstash_Format     On
         Logstash_Prefix     mhc-dev
-        Replace_Dots        On
-        Suppress_Type_Name  On
-        Retry_Limit         False
-    
-  output-node.conf: |
-    [OUTPUT]
-        Name                es
-        Match               host.*
-        Host                mhc-logging-master
-        Port                9200
-        HTTP_User           elastic
-        HTTP_Passwd         Elastic@123
-        tls                 On
-        tls.verify          Off
-        Logstash_Format     On
-        Logstash_Prefix     mhc-node
         Replace_Dots        On
         Suppress_Type_Name  On
         Retry_Limit         False
@@ -262,7 +240,7 @@ spec:
         app.kubernetes.io/name: fluent-bit
         app.kubernetes.io/instance: fluent-bit
       annotations:
-        checksum/config: 433eb10ce4b482ab6fa15b0b3dc366f6e9e324650662f7f46032086b8e85bdea
+        checksum/config: 2abba48be69d2bdd4380c9a89990211bde05bd92e6eeb94bb55f8163041e2e98
     spec:
       
       serviceAccountName: fluent-bit

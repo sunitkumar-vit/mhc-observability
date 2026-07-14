@@ -1,0 +1,13 @@
+health status index                    uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+green  open   mhc-dev-2026.07.12       b43_529pRECC3YQxn2UsdQ   1   0      14460            0      4.9mb          4.9mb
+yellow open   kube-system-2026.07.14   O13Dlar5R2iy__cToe11Aw   1   1        651            0    243.5kb        243.5kb
+yellow open   logstash-2026.07.11      YSNBvfmPTFKRNHLh6nK3CQ   1   1     102768            0     25.8mb         25.8mb
+green  open   mhc-dev-2026.07.14       uNRAHGxeQq2OY8PS9TO2tQ   1   0         16            0     54.3kb         54.3kb
+green  open   mhc-dev-2026.07.13       Bna8eFLyRqWEMrPkbZsSew   1   0       2324            0        1mb            1mb
+yellow open   vault-2026.07.14         DyHgLcMbTKuGIuoCqovegQ   1   1         25            0    140.1kb        140.1kb
+yellow open   mhc-preprod-2026.07.14   VWCEH7O6TyuZRryLiW7ucg   1   1          4            0       19kb           19kb
+yellow open   mhc-node-2026.07.14      RlggcOlEQKOk5ToA8nL5Tw   1   1         72            0    117.5kb        117.5kb
+yellow open   ingress-nginx-2026.07.14 9V2QtoYpSOymobyVUSJ3lQ   1   1        261            0    205.1kb        205.1kb
+yellow open   monitoring-2026.07.14    giHn-0yoRByarWRzGgW7Ug   1   1        787            0      224kb          224kb
+yellow open   logging-2026.07.14       sDxRUBRxRAKk-kRHZbTpwA   1   1   26897354            0      2.9gb          2.9gb
+yellow open   logstash-2026.07.12      tQYCLHPJRZC2pem7m5F4AQ   1   1   71081637            0     24.7gb         24.7gb

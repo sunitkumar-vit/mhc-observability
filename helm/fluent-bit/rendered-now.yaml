@@ -79,6 +79,7 @@ data:
         Refresh_Interval  5
         Mem_Buf_Limit     50MB
         Skip_Long_Lines   On
+    
     [INPUT]
         Name              systemd
         Tag               host.*
@@ -262,7 +263,7 @@ spec:
         app.kubernetes.io/name: fluent-bit
         app.kubernetes.io/instance: fluent-bit
       annotations:
-        checksum/config: 433eb10ce4b482ab6fa15b0b3dc366f6e9e324650662f7f46032086b8e85bdea
+        checksum/config: e47f51a87f81925e3ddd242fd245af26fbe3c23b0ebcc9d553f5bc4ef8d766fd
     spec:
       
       serviceAccountName: fluent-bit
